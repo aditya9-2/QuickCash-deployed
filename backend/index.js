@@ -14,12 +14,14 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(cors({
-    origin: "*",
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'x-requested-with'],
-    credentials: true
-}));
+// app.use(cors({
+//     origin: ["http://localhost:3000", "https://quickcash-deployed.onrender.com"],
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization', 'x-requested-with'],
+
+// }));
+
+app.use(cors())
 
 const port = process.env.PORT || 3000;
 
